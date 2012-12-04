@@ -18,6 +18,4 @@ To use the web interface, just open namegame.html in your browser. Please note t
 Contributing
 ------------
 
-Pull requests are welcome and feel free to fork!
-
-
+Feel free to fork!

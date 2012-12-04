@@ -81,7 +81,6 @@ var startups = names.sortBy();
 var len = startups.count();
 var msg = '\nGenerated ' + len + ' startup names! Checking to see which ones are available...\n';
 var log = fs.createWriteStream(new Date().getTime().toString() + '.log', {'flags': 'a'});
-//var counter = 0;
 
 console.log(msg.bold.yellow);
 
@@ -109,7 +108,6 @@ startups.each(function(startup) {
             } else if(obj.response.available && !obj.response.registered) {
                console.log(startup.bold.green.inverse);
                log.write('SUCCESS!' + options.path.toString() + '\n' + domainData + '\n\n');
-               //counter += 1;
             }
         });
     }).end();

@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>Name Game - Startup Name Generator!</title>
+		<script type="text/javascript" lang="javascript" src="sugar-1.2.5.min.js"></script>
+		<script type="text/javascript" lang="javascript">
+			var makeUsSomeNames = function(){
+                // Add any new prefixes to this array
+                var prefixes = [
+                    "re",
+                    "un",
+                    "up"
+                ];
+				// Add any new words to this array
+				var words = [
+					"deed",
+					"help",
+					"friend",
+					"quest",
+					"love",
+					"true",
+					"joy",
+					"play",
+					"game",
+					"fun",
+					"good",
+					"buddy",
+                    "happy",
+                    "boost"
+				];
+				// Add any new suffixes to this array
+				var suffixes = [
+					"str",
+					"ify",
+					"fly",
+					"spot",
+					"r",
+					"ly",
+					"space",
+					"place",
+					"ful",
+					"quest",
+					"zy",
+					"buzz",
+                    "sauce",
+                    "scape",
+                    "boost",
+                    "plex"
+				];
+
+				var names = new Array();
+
+                // for each word, slap some fixes on 'em!
+				words.each(function(word) {
+					suffixes.each(function(suffix) {
+                        prefixes.each(function(prefix) {
+                            names.push('(' + prefix + ')' + word + suffix);
+                        });
+					});
+				});
+
+				return names.sortBy();
+
+			};
+		</script>
+	</head>
+	<body>
+		<div>
+			<script type="text/javascript" lang="javascript">
+				var startups = makeUsSomeNames();
+				document.write("<b>Generated " + startups.count() + " startup names!</b><br>");
+				startups.each(function(startup) {
+					document.write(startup + "<br>");
+				});
+			</script>
+		</div>
+	</body>
+</html>
